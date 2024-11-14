@@ -1,0 +1,13 @@
+source-server:
+  host: '${SOURCE-HOST:127.0.0.1}'
+  port: '${SOURCE-PORT:1111}'
+
+spring:
+  application:
+    name: client-server
+
+server:
+  address: '${CLIENT-HOST:127.0.0.1}'
+  port: '${CLIENT-PORT:127.0.0.1}'
+
+debug: true
