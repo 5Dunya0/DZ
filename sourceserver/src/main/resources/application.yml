@@ -3,5 +3,5 @@ spring:
     name: source-server
 
 server:
-  address: '${SOURCE-HOST:127.0.0.1}'
-  port: '${SOURCE-PORT:1234}'
+  address: '${SOURCE_HOST:127.0.0.1}'
+  port: '${SOURCE_PORT:1234}'

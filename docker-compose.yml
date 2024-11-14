@@ -1,0 +1,25 @@
+services:
+  source:
+    container_name: source-server
+    build:
+      context: .
+      dockerfile: sourceserver/Dockerfile
+    env_file: ".env"
+    environment:
+      - SOURCE_HOST=0.0.0.0
+    ports:
+      - "8080:${SOURCE_PORT}"
+
+  client:
+    container_name: client-server
+    build:
+      context: .
+      dockerfile: clientserver/Dockerfile
+    env_file: ".env"
+    environment:
+      - SOURCE_HOST=source
+      - CLIENT_HOST=0.0.0.0
+    ports:
+      - "8081:${CLIENT_PORT}"
+    depends_on:
+      - source

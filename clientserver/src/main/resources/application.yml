@@ -1,11 +1,11 @@
 source-server:
-  host: '${SOURCE-HOST:127.0.0.1}'
-  port: '${SOURCE-PORT:1234}'
+  host: '${SOURCE_HOST:127.0.0.1}'
+  port: '${SOURCE_PORT:1234}'
 
 spring:
   application:
     name: client-server
 
 server:
-  address: '${CLIENT-HOST:127.0.0.1}'
-  port: '${CLIENT-PORT:5678}'
+  address: '${CLIENT_HOST:127.0.0.1}'
+  port: '${CLIENT_PORT:5678}'

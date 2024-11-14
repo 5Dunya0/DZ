@@ -1,5 +1,8 @@
 package ru.nikitinfo.clientserver;
 
+import jakarta.servlet.http.HttpServletRequest;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +14,7 @@ import ru.nikitinfo.sourceserver.SourceServerResponse;
 //import ru.nikitinfo.sourceserver.SourceServerResponse;
 
 @RestController
+@Slf4j
 public class ClientServerController {
 
     private final ConnectionConfig config;
@@ -21,7 +25,8 @@ public class ClientServerController {
     }
 
     @GetMapping(value="/", produces=MediaType.APPLICATION_JSON_VALUE)
-    public Object getInformation() {
+    public Object getInformation(HttpServletRequest request) {
+        log.info("Request from {}", request.getRequestURL());
         String url = getSourceUrl();
         return getInformationFromSourceServer(url);
     }
@@ -33,6 +38,7 @@ public class ClientServerController {
                 return new ClientServerResponse(response.getBody());
             }
         } catch (RestClientException e) {
+            log.error(e.getMessage());
             return "Can't connect to source server.";
         }
         return "Status code is not 200.";
