@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: source-server
+
+server:
+  address: '${SOURCE-HOST:127.0.0.1}'
+  port: '${SOURCE-PORT:1234}'
