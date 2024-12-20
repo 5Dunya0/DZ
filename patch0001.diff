@@ -1,0 +1,29 @@
+From c22dd5a1e6c38946012c0839ef1cd754e579d03d Mon Sep 17 00:00:00 2001
+From: Alexander Nikitin <89016153+alekc080901@users.noreply.github.com>
+Date: Fri, 15 Nov 2024 12:00:05 +0300
+Subject: [PATCH] Update README.md
+
+---
+ README.md | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/README.md b/README.md
+index 3c3f87e..d16a77b 100644
+--- a/README.md
++++ b/README.md
+@@ -3,10 +3,10 @@
+ - **source-server**, возвращающий информацию по HTTP-запросу;
+ - **client-server**, обращающийся к _source-server_ за информацией.
+ 
+-jar-файлы с двумя сервисами лежат в папке **build** (~~точнее, лежали бы, но по заданию нельзя отправлять jar~~).
++jar-файлы с двумя сервисами лежат в папке **build** (~~лежать они там не должны, ибо по заданию нельзя отправлять jar, но я забыл прописать build в .gitignore~~).
+ 
+ Для сборки/пересборки проекта при изменении кода использовать команду: 
+-`mvn package`, которая автоматически сохранит jar-ники в _build_.
++`mvn package`, которая автоматически сохранит jar-ники в _build_. Должен быть установлен Maven и JDK 21.
+ 
+ Создание образов Docker по отдельности:\
+ `docker build -t source -f sourceserver\Dockerfile .`\
+-- 
+2.46.0
+
