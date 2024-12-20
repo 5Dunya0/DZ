@@ -1,4 +1,4 @@
-# DevOps3
+
 Проект состоит из двух SpringBoot-сервисов:
 - **source-server**, возвращающий информацию по HTTP-запросу;
 - **client-server**, обращающийся к _source-server_ за информацией.
