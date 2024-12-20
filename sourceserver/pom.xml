@@ -24,28 +24,6 @@
 					<finalName>source</finalName>
 				</configuration>
 			</plugin>
-<!--			<plugin>-->
-<!--				<groupId>org.apache.maven.plugins</groupId>-->
-<!--				<artifactId>maven-jar-plugin</artifactId>-->
-<!--				<version>3.4.2</version>-->
-<!--				<configuration>-->
-<!--					<outputDirectory>../build</outputDirectory>-->
-<!--				</configuration>-->
-<!--				<executions>-->
-<!--					<execution>-->
-<!--						<id>attach-artifacts</id>-->
-<!--						<phase>package</phase>-->
-<!--						<configuration>-->
-<!--							<artifacts>-->
-<!--								<artifact>-->
-<!--									<file>${project.version}-run</file>-->
-<!--									<type>jar</type>-->
-<!--								</artifact>-->
-<!--							</artifacts>-->
-<!--						</configuration>-->
-<!--					</execution>-->
-<!--				</executions>-->
-<!--			</plugin>-->
 		</plugins>
 	</build>
 
